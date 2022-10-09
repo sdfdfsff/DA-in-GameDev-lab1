@@ -38,24 +38,25 @@
 Ход работы:
 
 - Написать программу на python и unity, которая выводит Hello World
-![Image alt](https://github.com/sdfdfsff/DA-in-GameDev-lab1/blob/main/Screenshot_1.png)
-![Image alt](https://github.com/sdfdfsff/DA-in-GameDev-lab1/blob/main/Screenshot_2.png)
+![Image alt](https://github.com/sdfdfsff/DA-in-GameDev-lab1/blob/main/lab1/Screenshot_1.png)
+
+![Image alt](https://github.com/sdfdfsff/DA-in-GameDev-lab1/blob/main/lab1/Screenshot_2.png)
 
 ## Задание 2
 ### 2.1 Должна ли величина loss стремиться к нулю при изменении исходных данных? Ответьте на вопрос, приведите пример выполнения кода, который подтверждает ваш ответ.
 
 - Да, должна. В подтверждении прикрепил скрины на гитхабе
-![Image alt](https://github.com/sdfdfsff/DA-in-GameDev-lab1/blob/main/Screenshot_5.png)
+![Image alt](https://github.com/sdfdfsff/DA-in-GameDev-lab1/blob/main/lab1/Screenshot_5.png)
 ## Задание 3
 ### Какова роль параметра Lr? Ответьте на вопрос, приведите пример выполнения кода, который подтверждает ваш ответ. В качестве эксперимента можете изменить значение параметра.
 
 - Lr в коде влияет на линию, которая при увеличении Lr линия отрисовывается верх
-![Image alt](https://github.com/sdfdfsff/DA-in-GameDev-lab1/blob/main/Screenshot_6.png)
-![Image alt](https://github.com/sdfdfsff/DA-in-GameDev-lab1/blob/main/Screenshot_7.png)
-![Image alt](https://github.com/sdfdfsff/DA-in-GameDev-lab1/blob/main/Screenshot_8.png)
-![Image alt](https://github.com/sdfdfsff/DA-in-GameDev-lab1/blob/main/Screenshot_9.png)
-![Image alt](https://github.com/sdfdfsff/DA-in-GameDev-lab1/blob/main/Screenshot_10.png)
-![Image alt](https://github.com/sdfdfsff/DA-in-GameDev-lab1/blob/main/Screenshot_11.png)
+![Image alt](https://github.com/sdfdfsff/DA-in-GameDev-lab1/blob/main/lab1/Screenshot_6.png)
+![Image alt](https://github.com/sdfdfsff/DA-in-GameDev-lab1/blob/main/lab1/Screenshot_7.png)
+![Image alt](https://github.com/sdfdfsff/DA-in-GameDev-lab1/blob/main/lab1/Screenshot_8.png)
+![Image alt](https://github.com/sdfdfsff/DA-in-GameDev-lab1/blob/main/lab1/Screenshot_9.png)
+![Image alt](https://github.com/sdfdfsff/DA-in-GameDev-lab1/blob/main/lab1/Screenshot_10.png)
+![Image alt](https://github.com/sdfdfsff/DA-in-GameDev-lab1/blob/main/lab1/Screenshot_11.png)
 ## Выводы
 
 - После выполнения лабораторной работы я выяснил и понял как выполнять анализ данный и отрисовывать на их основе графики
