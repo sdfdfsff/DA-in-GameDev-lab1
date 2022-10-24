@@ -41,16 +41,17 @@
 -	Скачайте папку с ML агентом. Вы найдете ее в облаке с исходными файлами к лабораторной работе – ml-agents-release_19.
 -	В созданный проект добавьте ML Agent, выбрав Window - Package Manager - Add Package from disk. Последовательно добавьте .json – файлы
 
-![Image alt](https://github.com/sdfdfsff/DA-in-GameDev-lab1/blob/main/lab1/Screenshot_1.png)
+![Image alt](https://github.com/sdfdfsff/DA-in-GameDev-lab1/blob/lab3/Screenshot_3.png)
 
 -	Если все сделано правильно, то во вкладке с компонентами (Components) внутри Unity вы увидите строку ML Agent.
-
-![Image alt](https://github.com/sdfdfsff/DA-in-GameDev-lab1/blob/main/lab1/Screenshot_2.png)
-
-
 -	Далее запускаем Anaconda Prompt для возможности запуска команд через консоль.
 -	Далее пишем серию команд для создания и активации нового ML-агента, а также для скачивания необходимых библиотек
 
+![Image alt](https://github.com/sdfdfsff/DA-in-GameDev-lab1/blob/lab3/Screenshot_1.png)
+![Image alt](https://github.com/sdfdfsff/DA-in-GameDev-lab1/blob/lab3/Screenshot_2.png)
+![Image alt](https://github.com/sdfdfsff/DA-in-GameDev-lab1/blob/lab3/Screenshot_4.png)
+![Image alt](https://github.com/sdfdfsff/DA-in-GameDev-lab1/blob/lab3/Screenshot_7.png)
+![Image alt](https://github.com/sdfdfsff/DA-in-GameDev-lab1/blob/lab3/Screenshot_7.png)
 
 -	Создайте на сцене плоскость, куб и сферу так, как показано на рисунке ниже. Создайте простой C# скрипт-файл и подключите его к сфере
 -	В скрипт-файл RollerAgent.cs добавьте код, опубликованный в материалах лабораторных работ – по ссылке.
@@ -116,14 +117,24 @@ public class RollerAgent : Agent
 
 -	Объекту «сфера» добавить компоненты Decision Requester, Behavior Parameters и настройте их так, как показано на рисунке ниже
 
--	В корень проекта добавьте файл конфигурации нейронной сети, доступный в папке с файлами проекта по ссылке.
+![Image alt](https://github.com/sdfdfsff/DA-in-GameDev-lab1/blob/lab3/Screenshot_8.png)
 
+-	В корень проекта добавьте файл конфигурации нейронной сети, доступный в папке с файлами проекта по ссылке.
 -	Запустите работу ml-агента
 -	Вернитесь в проект Unity, запустите сцену, проверьте работу ML-Agent’a.
 
+![Image alt](https://github.com/sdfdfsff/DA-in-GameDev-lab1/blob/lab3/Screenshot_9.png)
+
 -	Сделайте 3, 9, 27 копий модели «Плоскость-Сфера-Куб», запустите симуляцию сцены и наблюдайте за результатом обучения модели.
 
+![Image alt](https://github.com/sdfdfsff/DA-in-GameDev-lab1/blob/lab3/Screenshot_10.png)
+![Image alt](https://github.com/sdfdfsff/DA-in-GameDev-lab1/blob/lab3/Screenshot_11.png)
+![Image alt](https://github.com/sdfdfsff/DA-in-GameDev-lab1/blob/lab3/Screenshot_12.png)
+
 -	После завершения обучения проверьте работу модели.
+
+![Image alt](https://github.com/sdfdfsff/DA-in-GameDev-lab1/blob/lab3/Screenshot_13.png)
+
 - Сделайте выводы
 При увеличении количества копий, модель обучается быстрее. По итогу обучения модели, шар может успешно достичь куба.
 
@@ -232,7 +243,11 @@ public class RollerAgent : Agent
 }
 ```
 - Зададим параметры RollerAgent в Unity
+![Image alt](https://github.com/sdfdfsff/DA-in-GameDev-lab1/blob/lab3/Screenshot_14.png)
+
 - Переобучим модель
+![Image alt](https://github.com/sdfdfsff/DA-in-GameDev-lab1/blob/lab3/Screenshot_15.png)
+
 - Проверим результат
 
 ## Выводы
