@@ -31,32 +31,120 @@
 - ✨Magic ✨
 
 ## Цель работы
-Ознакомиться с основными операторами зыка Python на примере реализации линейной регрессии.
+Ознакомиться с работой перцептрона
 
 ## Задание 1
-### Пошагово выполнить каждый пункт раздела "ход работы" с описанием и примерами реализации задач
+### В проекте Unity реализовать перцептрон, который умеет производить вычисления
 Ход работы:
 
-- Написать программу на python и unity, которая выводит Hello World
-![Image alt](https://github.com/sdfdfsff/DA-in-GameDev-lab1/blob/main/lab1/Screenshot_1.png)
-
-![Image alt](https://github.com/sdfdfsff/DA-in-GameDev-lab1/blob/main/lab1/Screenshot_2.png)
-
+- Добавил к пустому объекту скрипт Perceptron
+![Image alt](https://github.com/sdfdfsff/DA-in-GameDev-lab1/blob/main/lab4/Screenshot_1.png)
+- Заполнил элементы 
+1. OR, понадобилось 3 эпохи, 4 вычисляла корректно
+```
+void Start() {
+  Train(4);
+  Debug.Log("Test 0 0: " + CalcOutput(0,0));
+  Debug.Log("Test 0 1: " + CalcOutput(0,1));
+  Debug.Log("Test 1 0: " + CalcOutput(1,0));
+  Debug.Log("Test 1 1: " + CalcOutput(1,1));
+}
+```
+![Image alt](https://github.com/sdfdfsff/DA-in-GameDev-lab1/blob/main/lab4/Screenshot_2.png)
+2. AND, понадобилось 4 эпохи, 5 вычисляла корректно
+```
+void Start() {
+  Train(5);
+  Debug.Log("Test 0 0: " + CalcOutput(0,0));
+  Debug.Log("Test 0 1: " + CalcOutput(0,1));
+  Debug.Log("Test 1 0: " + CalcOutput(1,0));
+  Debug.Log("Test 1 1: " + CalcOutput(1,1));
+}
+```
+![Image alt](https://github.com/sdfdfsff/DA-in-GameDev-lab1/blob/main/lab4/Screenshot_3.png)
+3. NAND, понадобилось 5 эпохи, 6 вычисляла корректно
+```
+void Start() {
+  Train(6);
+  Debug.Log("Test 0 0: " + CalcOutput(0,0));
+  Debug.Log("Test 0 1: " + CalcOutput(0,1));
+  Debug.Log("Test 1 0: " + CalcOutput(1,0));
+  Debug.Log("Test 1 1: " + CalcOutput(1,1));
+}
+```
+![Image alt](https://github.com/sdfdfsff/DA-in-GameDev-lab1/blob/main/lab4/Screenshot_4.png)
+4. NAND, не вычисляла даже после 100.000 эпох так как не смогла научится
+```
+void Start() {
+  Train(100000);
+  Debug.Log("Test 0 0: " + CalcOutput(0,0));
+  Debug.Log("Test 0 1: " + CalcOutput(0,1));
+  Debug.Log("Test 1 0: " + CalcOutput(1,0));
+  Debug.Log("Test 1 1: " + CalcOutput(1,1));
+}
+```
+![Image alt](https://github.com/sdfdfsff/DA-in-GameDev-lab1/blob/main/lab4/Screenshot_5.png)
 ## Задание 2
-### 2.1 Должна ли величина loss стремиться к нулю при изменении исходных данных? Ответьте на вопрос, приведите пример выполнения кода, который подтверждает ваш ответ.
-
-- Да, должна. В подтверждении прикрепил скрины на гитхабе
-![Image alt](https://github.com/sdfdfsff/DA-in-GameDev-lab1/blob/main/lab1/Screenshot_5.png)
-## Задание 3
-### Какова роль параметра Lr? Ответьте на вопрос, приведите пример выполнения кода, который подтверждает ваш ответ. В качестве эксперимента можете изменить значение параметра.
-
-- Lr в коде влияет на линию, которая при увеличении Lr линия отрисовывается верх
+### Построить графики зависимости количества эпох от ошибки обучения. Указать от чего зависит необходимое количество эпох обучения
+Ход работы:
+- благодаря полученным данным, построил график в excel
 ![Image alt](https://github.com/sdfdfsff/DA-in-GameDev-lab1/blob/main/lab1/Screenshot_6.png)
+- Количество эпох зависит от смещения и веса
+```
+double DotProductBias(double[] v1, double[] v2){
+  if (v1 == null || v2 == null) return -1;
+  if (v1.Length != v2.Lenght) return -1;
+  double d = 0;
+  for (int x = 0; x < v1.Lenght; x++){
+    d += v1[x]*v2[x];
+  }
+  d += bias;
+  return d;
+}
+
+double CalcOutpyt(int i){
+  double dp = DotProductBias(weights,ts[i].input);
+  if (dp > 0) return(1);
+  return (0);
+}
+```
+## Задание 3
+### Построить визуальную модель работы перцептрона на сцене Unity
+Ход работы:
+- модель для работы NAND, 
+черные - нули
+белые - единицы
 ![Image alt](https://github.com/sdfdfsff/DA-in-GameDev-lab1/blob/main/lab1/Screenshot_7.png)
-![Image alt](https://github.com/sdfdfsff/DA-in-GameDev-lab1/blob/main/lab1/Screenshot_8.png)
-![Image alt](https://github.com/sdfdfsff/DA-in-GameDev-lab1/blob/main/lab1/Screenshot_9.png)
-![Image alt](https://github.com/sdfdfsff/DA-in-GameDev-lab1/blob/main/lab1/Screenshot_10.png)
-![Image alt](https://github.com/sdfdfsff/DA-in-GameDev-lab1/blob/main/lab1/Screenshot_11.png)
+- скрипт для изменения цвета при столкновении
+```
+using UnityEngine;
+
+public class ChangeColor : MonoBehaviour
+{
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.GetComponent<Renderer>().material.color == Color.black && this.gameObject.GetComponent<Renderer>().material.color == Color.black)
+        {
+            other.gameObject.GetComponent<Renderer>().material.color = Color.white;
+            this.gameObject.GetComponent<Renderer>().material.color = Color.white;
+        }
+        else if (other.gameObject.GetComponent<Renderer>().material.color == Color.black && this.gameObject.GetComponent<Renderer>().material.color == Color.white)
+        {
+            other.gameObject.GetComponent<Renderer>().material.color = Color.white;
+            this.gameObject.GetComponent<Renderer>().material.color = Color.white;
+        }
+        else if (other.gameObject.GetComponent<Renderer>().material.color == Color.white && this.gameObject.GetComponent<Renderer>().material.color == Color.black)
+        {
+            other.gameObject.GetComponent<Renderer>().material.color = Color.white;
+            this.gameObject.GetComponent<Renderer>().material.color = Color.white;
+        }
+        else {
+            other.gameObject.GetComponent<Renderer>().material.color = Color.black;
+            this.gameObject.GetComponent<Renderer>().material.color = Color.black;
+        }
+    }
+}
+```
 ## Выводы
 
-- После выполнения лабораторной работы я выяснил и понял как выполнять анализ данный и отрисовывать на их основе графики
+- Я познакомился с работой перцептрона, который вычисляет различные функции, построил график зависимостей, построил визуальную модель работы перцептрона на сцене Unity
