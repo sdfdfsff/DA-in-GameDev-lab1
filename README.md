@@ -93,7 +93,7 @@ void Start() {
 ### Построить графики зависимости количества эпох от ошибки обучения. Указать от чего зависит необходимое количество эпох обучения
 Ход работы:
 - благодаря полученным данным, построил график в excel
-![Image alt](https://github.com/sdfdfsff/DA-in-GameDev-lab1/blob/lab1/Screenshot_6.png)
+![Image alt](https://github.com/sdfdfsff/DA-in-GameDev-lab1/blob/lab4/Screenshot_6.png)
 
 - Количество эпох зависит от смещения и веса
 ```
@@ -120,7 +120,7 @@ double CalcOutpyt(int i){
 - модель для работы NAND, 
 черные - нули
 белые - единицы
-![Image alt](https://github.com/sdfdfsff/DA-in-GameDev-lab1/blob/lab1/Screenshot_7.png)
+![Image alt](https://github.com/sdfdfsff/DA-in-GameDev-lab1/blob/lab4/Screenshot_7.png)
 
 - скрипт для изменения цвета при столкновении
 ```
