@@ -39,6 +39,7 @@
 
 - Добавил к пустому объекту скрипт Perceptron
 ![Image alt](https://github.com/sdfdfsff/DA-in-GameDev-lab1/blob/lab4/Screenshot_1.png)
+
 - Заполнил элементы 
 1. OR, понадобилось 3 эпохи, 4 вычисляла корректно
 ```
@@ -51,6 +52,7 @@ void Start() {
 }
 ```
 ![Image alt](https://github.com/sdfdfsff/DA-in-GameDev-lab1/blob/lab4/Screenshot_2.png)
+
 2. AND, понадобилось 4 эпохи, 5 вычисляла корректно
 ```
 void Start() {
@@ -62,6 +64,7 @@ void Start() {
 }
 ```
 ![Image alt](https://github.com/sdfdfsff/DA-in-GameDev-lab1/blob/lab4/Screenshot_3.png)
+
 3. NAND, понадобилось 5 эпохи, 6 вычисляла корректно
 ```
 void Start() {
@@ -73,6 +76,7 @@ void Start() {
 }
 ```
 ![Image alt](https://github.com/sdfdfsff/DA-in-GameDev-lab1/blob/lab4/Screenshot_4.png)
+
 4. NAND, не вычисляла даже после 100.000 эпох так как не смогла научится
 ```
 void Start() {
@@ -84,11 +88,13 @@ void Start() {
 }
 ```
 ![Image alt](https://github.com/sdfdfsff/DA-in-GameDev-lab1/blob/lab4/Screenshot_5.png)
+
 ## Задание 2
 ### Построить графики зависимости количества эпох от ошибки обучения. Указать от чего зависит необходимое количество эпох обучения
 Ход работы:
 - благодаря полученным данным, построил график в excel
 ![Image alt](https://github.com/sdfdfsff/DA-in-GameDev-lab1/blob/lab1/Screenshot_6.png)
+
 - Количество эпох зависит от смещения и веса
 ```
 double DotProductBias(double[] v1, double[] v2){
@@ -115,6 +121,7 @@ double CalcOutpyt(int i){
 черные - нули
 белые - единицы
 ![Image alt](https://github.com/sdfdfsff/DA-in-GameDev-lab1/blob/lab1/Screenshot_7.png)
+
 - скрипт для изменения цвета при столкновении
 ```
 using UnityEngine;
